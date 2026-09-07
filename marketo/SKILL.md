@@ -148,17 +148,6 @@ Full CSS class reference and a copy-paste modal pattern (open/close JS,
 overlay, auto-close on successful submit):
 `references/forms-integration.md`.
 
-## Visual polish: icons, hover states, matching a reference design
-
-Treat visual refinement (icons in badges, hover interactions on card grids,
-matching a reference design's exact colors/weights) as its own pass after
-the structural build works, not something to get perfect on the first draft.
-A few non-obvious things came up doing this in practice -- a CSS technique
-for icons that survive content edits, a specificity gotcha when a utility
-class meets a component's own styling, and why fetching a *live* Marketo LP
-URL for comparison doesn't work the way it seems like it should. All in
-`references/styling-patterns.md`.
-
 ## A gotcha worth flagging proactively
 
 Editing a template's code *after* landing pages already exist from it does
@@ -176,12 +165,17 @@ rather than assuming the template code is wrong.
   visually identify which one you're looking at from a screenshot
 - `references/mkto-tags-reference.md` -- complete tag syntax, every
   attribute, copy-paste patterns for color/boolean/string/text/image/form
-- `references/common-errors.md` -- every validation error message
-  encountered so far and its fix
+- `references/common-errors.md` -- every validation error, rendering bug,
+  and "why isn't my change showing up" issue encountered so far, with fixes.
+  Covers real Marketo-DOM structural traps (mkto nesting, mktoFormRow/
+  FormCol/FieldDescriptor margin stacking, native `<select>` chrome vs
+  text input height, floating labels needing JS not CSS), CSS gotchas that
+  look unrelated at first (overflow-x/y forcing each other to `auto`,
+  box-sizing eating into `.container`'s max-width), and the recurring
+  "content changes keep reverting" confusion (field-level saved content vs.
+  template defaults, template approval vs. Landing Page approval being
+  separate actions)
 - `references/forms-integration.md` -- Forms 2.0 CSS class reference, popup
   modal HTML/CSS/JS pattern
-- `references/styling-patterns.md` -- icon-in-badge CSS technique, a
-  specificity gotcha with shared utility classes, and hover-interaction
-  patterns for card grids
 - `scripts/validate_template.py` -- run on any finished template file before
   telling the user to paste it into Design Studio
