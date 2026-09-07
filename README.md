@@ -33,6 +33,39 @@ Restart the agent or begin a new session after installation so the skills are
 discovered. Copy each complete directory, not only its `SKILL.md`, because its
 references and scripts are part of the skill.
 
+## ChatGPT plugin package
+
+ChatGPT web and mobile do not install these folders directly from an arbitrary
+GitHub URL. The three skills are also bundled as a skills-only plugin at:
+
+```text
+plugins/designerduo-agent-skills/
+|-- .codex-plugin/
+|   `-- plugin.json
+`-- skills/
+    |-- duo-review/
+    |-- marketo/
+    `-- twitter/
+```
+
+The plugin is named `designerduo-agent-skills`. Its manifest contains the
+public listing metadata, three starter prompts, and a single `skills` entry
+that exposes all bundled workflows. The distributable ZIP is generated at
+`dist/designerduo-agent-skills-0.1.0.zip`.
+
+Publishing it in ChatGPT requires submission through the OpenAI Platform:
+
+1. Use an organization whose submitter has **Apps Management: Write** access.
+2. Verify the individual or business identity that will publish the plugin.
+3. Open the Plugin Submission Portal and create a **Skills only** submission.
+4. Upload the ZIP bundle and complete the listing, policy, availability, test
+   case, and release-note fields.
+5. Submit the draft for review. After approval and publication, users can find
+   and install the plugin from the shared ChatGPT and Codex Plugin Directory.
+
+See [`SUBMISSION.md`](SUBMISSION.md) for prepared listing copy, starter prompts,
+test cases, release notes, and the remaining publisher-owned requirements.
+
 ## DuoReview
 
 ### Purpose

@@ -1,0 +1,28 @@
+{
+  "name": "designerduo-agent-skills",
+  "version": "0.1.0",
+  "description": "Three reusable skills for launch reviews, Adobe Marketo development, and social writing in Subash's voice.",
+  "author": {
+    "name": "Subash Dharel",
+    "url": "https://github.com/nepdud"
+  },
+  "homepage": "https://github.com/nepdud/skills",
+  "repository": "https://github.com/nepdud/skills",
+  "keywords": ["skills", "marketo", "cro", "seo", "social-media"],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "DesignerDuo Agent Skills",
+    "shortDescription": "Launch audits, Marketo development, and social writing.",
+    "longDescription": "A collection of three reusable workflows: DuoReview for complete pre-launch audits, Marketo for landing pages and Forms 2.0, and Social Persona for writing in Subash's voice.",
+    "developerName": "Subash Dharel",
+    "category": "Productivity",
+    "capabilities": ["Skills"],
+    "websiteURL": "https://github.com/nepdud/skills",
+    "defaultPrompt": [
+      "Run a complete pre-launch review of this site.",
+      "Help me build or troubleshoot a Marketo landing page.",
+      "Rewrite this social post in my voice."
+    ],
+    "brandColor": "#4F46E5"
+  }
+}
