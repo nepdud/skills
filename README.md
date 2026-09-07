@@ -33,10 +33,37 @@ Restart the agent or begin a new session after installation so the skills are
 discovered. Copy each complete directory, not only its `SKILL.md`, because its
 references and scripts are part of the skill.
 
+## Install directly in ChatGPT Desktop
+
+Use only the three files in [`chatgpt-upload/`](chatgpt-upload/) for manual
+drag-and-drop installation:
+
+```text
+chatgpt-upload/
+|-- duo-review.skill
+|-- marketo.skill
+`-- social-persona.skill
+```
+
+Each archive contains exactly one skill and exactly one `SKILL.md`. To install:
+
+1. Delete previous duplicate copies from ChatGPT's **Created by me** list.
+2. Drag `duo-review.skill` into ChatGPT once.
+3. Drag `marketo.skill` into ChatGPT once.
+4. Drag `social-persona.skill` into ChatGPT once.
+5. Confirm that the list contains exactly three entries: **duo review**,
+   **marketo**, and **social persona**.
+
+Do not drag the entire repository, the `plugins/` directory, or the ZIP in
+`dist/` into the Skills screen. Those locations contain publishing artifacts
+and repeat the canonical skill files, which causes ChatGPT to create multiple
+entries with the same skill name.
+
 ## ChatGPT plugin package
 
-ChatGPT web and mobile do not install these folders directly from an arbitrary
-GitHub URL. The three skills are also bundled as a skills-only plugin at:
+The following package is for Plugin Directory submission, not manual dragging
+into the **Created by me** screen. The three skills are bundled for publication
+at:
 
 ```text
 plugins/designerduo-agent-skills/
